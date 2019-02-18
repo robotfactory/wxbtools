@@ -10,7 +10,7 @@ Takes plain text copy/pasted from a WeatherBattle.com battle page and turns it i
 ### Usage:
 Select all the text (CTL+A) on a battle page, copy it (CTL+C), then paste it into a plain old text file (CTL+V). Save that text file. Then, run the script on it.
 
-```
+```bash
 $ ./wxbparse.py -h
 usage: wxbparse.py [-h] [-f FORMAT] input_file
 
