@@ -104,8 +104,9 @@ venv.bak/
 .mypy_cache/
 
 # Output files
-.csv
-.json
+*.csv
+*.json
 
 # Input Files
-.txt
+*.txt
+*.json
