@@ -97,6 +97,7 @@ def wxbparse(file_array):
 		if ("Begins" in current_line) and ("Prize" in current_line) and ("Entry" in current_line) and ("Closes" in current_line):
 			# WXB displays the start and end time and date weird. Split it up, add a year so datetime doesn't barf.
 			# TODO: This is going to break if it's Dec 31 and you're running for a battle starting on Jan 1
+			# TODO: This should probably be a timezone aware datetime object but since all WXB games are timed in America/New_York I don't care right now
 			start_time = re.sub("st|nd|rd|th","",re.search(r"((Begins: )(.*?)(Ends:))",current_line).group(3).strip())
 			battle_data['metadata']['begins'] = start_time.split(", ")[0] + ", " + str(datetime.today().year) + " " + start_time.split(", ")[1]
 			end_time = re.sub("st|nd|rd|th","",re.search(r"((Ends: )(.*?)(Prize:))",current_line).group(3).strip())
