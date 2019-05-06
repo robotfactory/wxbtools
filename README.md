@@ -8,22 +8,6 @@ These tools are intended to be helpful, but you still need to make your own deci
 Takes plain text copy/pasted from a WeatherBattle.com battle page and turns it into something useful. Produces either json or csv output which you can then use in your favorite tools.
 
 ### Usage:
-Select all the text (CTL+A) on a battle page, copy it (CTL+C), then paste it into a plain old text file (CTL+V). Save that text file. Then, run the script on it.
+Select all the text (CTL+A) on a battle page, copy it (CTL+C), then paste it into a plain old text file (CTL+V). Save that text file. Then, run it through wxbparse.
 
-```bash
-$ ./wxbparse.py -h
-usage: wxbparse.py [-h] [-f FORMAT] input_file
 
-Injests plain text from WXBattle and spits out pretty stuff
-
-positional arguments:
-  input_file            The file to injest
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -f FORMAT, --format FORMAT
-                        Output to csv or json. (Default: csv)
-```
-
-### Example:
-`wxbparse.py -f json input.txt`
